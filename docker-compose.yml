@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  web:
+    build: ./web/
+    environment:
+      DJANGO_SETTINGS_MODULE: target.settings.default
+    entrypoint: /entrypoint/entrypoint.sh
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./docker/django:/entrypoint
+      - ./docker/data/pip-cache/:/root/.cache/pip/wheels
+      - ./web:/code
+      - ./web/static:/static
+      - ./web/media:/media
