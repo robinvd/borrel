@@ -19,6 +19,7 @@ from django.contrib.auth.views import (
 urlpatterns = [
 	              url(r'^admin/', include(admin.site.urls)),
 	              url(r'^', include('target.frontend.errors.urls')),
+	              url(r'^', include('target.borrel.urls')),
 	              url(r'^login/$', LoginView.as_view(template_name='auth/login.html'), name='login'),
 	              url(r'^logout/$', LogoutView.as_view(next_page=reverse_lazy('login')), name='logout')
               ] \

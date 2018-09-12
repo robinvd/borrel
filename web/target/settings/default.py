@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 	
 	'target',
 	'target.frontend',
+	'target.borrel',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -69,7 +70,7 @@ AUTHENTICATION_BACKENDS = (
 )
 
 LOGIN_URL = "/login"
-LOGIN_REDIRECT_URL = "/borrelen"
+LOGIN_REDIRECT_URL = "/"
 LOGOUT_URL = '/'
 
 TEMPLATES = [

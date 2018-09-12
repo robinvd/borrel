@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block maincontent %}
+
+result
+
+<p>{{ borrel.date }}</p>
+
+total count: {{ stats.count }}
+
+<p>drinks:</p>
+{% for x in stats.drinks %}
+    <div>
+        {{ x.drink }}: {{ x.drink__count }}
+    </div>
+{% endfor %}
+
+<p>food:</p>
+{% for x in stats.foods %}
+    <div>
+        {{ x.food }}: {{ x.food__count }}
+    </div>
+{% endfor %}
+
+{% endblock %}
